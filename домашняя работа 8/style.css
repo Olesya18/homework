@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    border: 2px dashed #000;
+    width: 700px;
+    height: 600px;
+    position: relative;
+    left: 25%;
+}
+.blue{
+    width: 150px;
+    height: 150px;
+    background: blue;
+    transform: translate(501px, 45px) scale(1.6);
+}
+.green{
+    width: 150px;
+    height: 150px;
+    background: green;
+    transform: translate(200px, -80px) rotate(30deg);
+}
+.red{
+    width: 150px;
+    height: 150px;
+    background: red;
+    transform: translate(350px, 146px);
+}
