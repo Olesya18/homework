@@ -36,7 +36,7 @@ body{
     top: -70px;
     left: -280px;
     opacity: 0;
-    transition: width 1s  ease;
+    transition: width 1s ease, opacity 1s ease;
 }
 
 .text{
@@ -44,8 +44,8 @@ body{
     text-align: center;
     padding-top: 150px;
     opacity: 0;
-    transition: 1s ease;
-    transition-delay: 0.9s;
+    transition: opacity 1s ease;
+    transition-delay: 1s;
 }
 
  .block:hover .white-line {
@@ -55,4 +55,9 @@ body{
 
   .block:hover .text {
     opacity: 1;
+    transition-delay: 1s;
   }
+
+.block:not(:hover) .text {
+    transition-delay: 0s; /* убираем задержку при исчезновении */
+}
