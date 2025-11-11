@@ -60,7 +60,7 @@
 .about__img-button::before {
     content: '';
     position: absolute;
-    border: 1px solid #CEAAD0;
+    border: 1px solid var(--accent-color-2);
     inset: 5px;
     border-radius: 50%;
 
@@ -178,7 +178,7 @@
 .program__price-text {
     line-height: 1.6;
     text-transform: uppercase;
-    color: #ceaad0;
+    color: var(--accent-color-2);
     margin-bottom: 5px;
 }
 
@@ -324,7 +324,7 @@
 }
 
 .accordion-content__title {
-    color: #CEAAD0;
+    color: var(--accent-color-2);
     line-height: 1.6;
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -340,7 +340,7 @@
 }
 
 .accordion-content__icon {
-    border: 1px solid #CEAAD0;
+    border: 1px solid var(--accent-color-2);
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -600,7 +600,7 @@
 
 .testimonials__student-inst {
     margin: 0 auto;
-    color: #ceaad0;
+    color: var(--accent-color-2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -627,6 +627,140 @@
 }
 
 /*=========================================*/
+
+.contact {
+    padding: 140px 0;
+    background: url("../img/decor/bg-footer.png") 50% 0 / cover no-repeat;
+}
+
+.contact__inner {
+    display: flex;
+    align-items: end;
+    gap: 84px;
+    z-index: 1;
+    position: relative;
+}
+
+.contact__inner::before {
+    content: url("../img/decor/berries.png");
+    position: absolute;
+    top: -4%;
+    left: 0;
+}
+
+.contact__inner::after {
+    content: url("../img/decor/beries-2.png");
+    position: absolute;
+    top: 4%;
+    right: 0;
+}
+
+.contact__img img {
+    width: 100%;
+    filter: drop-shadow(0px 4px 30px rgba(198, 176, 161, 0.3));
+}
+
+.contact__body {
+    max-width: 420px;
+}
+
+.contact__title {
+    margin-bottom: 20px;
+}
+
+.contact__text {
+    margin-bottom: 40px;
+}
+
+.contact__label {
+    margin-bottom: 10px;
+}
+
+.contact__input {
+    display: block;
+    width: 100%;
+    background: #00000000;
+    border: 1px solid var(--input-color);
+    border-radius: 100px;
+    padding: 19px 42px 19px 28px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    transition: var(--transition);
+    margin-bottom: 20px;
+}
+
+.contact__input:hover {
+    border-color: var(--accent-color);
+}
+
+.contact__input::placeholder {
+    color: var(--input-color);
+    transition: var(--transition);
+}
+
+.contact__input:hover::placeholder {
+    color: var(--accent-color);
+}
+
+.contact__check-label {
+    display: flex;
+    align-items: start;
+    gap: 5px;
+    max-width: 288px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.contact__check-label a {
+    text-decoration: underline;
+    transition: var(--transition);
+}
+
+.contact__check-label a:hover {
+    color: var(--accent-color);
+}
+
+.contact__checkbox {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--input-color);
+    transition: var(--transition);
+    border-radius: 4px;
+    flex-shrink: 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.contact__checkbox:hover {
+    border: 1px solid var(--accent-color);
+}
+
+.contact__checkbox:checked {
+    background: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+
+.contact__checkbox::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("../img/icons/check.svg") 50% 50% no-repeat;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.contact__checkbox:checked::before {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+/*============================*/
 /*===================================*/
 @media (max-width: 1200px) {
     .hero__img {
@@ -638,6 +772,25 @@
         position: static;
         max-width: none;
         margin-top: 30px;
+    }
+
+    /*=================================*/
+
+    .program__top {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tab-controls {
+        flex-wrap: wrap;
+    }
+
+    /*==========================*/
+
+
+
+    .contact__inner::after {
+        top: -20%;
     }
 
     /*==========================*/
@@ -652,16 +805,7 @@
         text-align: center;
     }
 
-    /*=================================*/
 
-    .program__top {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .tab-controls {
-        flex-wrap: wrap;
-    }
 }
 
 @media (max-width: 1100px) {
@@ -685,6 +829,13 @@
     }
 
     .accordion-content {
+        gap: 30px;
+    }
+
+    /*==============================*/
+
+    .contact__inner {
+        align-items: center;
         gap: 30px;
     }
 }
@@ -748,6 +899,16 @@
     .testimonials__scrollbar.swiper-scrollbar {
         width: 50%;
         margin: 0 auto;
+    }
+
+    /*==========================*/
+
+    .contact__inner {
+        justify-content: center;
+    }
+
+    .contact__img {
+        display: none;
     }
 
     /*===============================*/
@@ -850,6 +1011,12 @@
 
     .testimonials__nav {
         align-self: end;
+    }
+
+    /*===================================*/
+
+    .contact__inner::before{
+        display: none;
     }
 }
 
@@ -955,6 +1122,20 @@
     .testimonials__slide {
         flex-direction: column;
         align-items: center;
+        text-align: center;
+    }
+
+    /*===================================*/
+    
+    .contact{
+       padding-bottom: 80px;
+    }
+
+    .contact__title {
+        text-align: center;
+    }
+
+    .contact__text {
         text-align: center;
     }
 }
