@@ -1,0 +1,329 @@
+.header {
+    background: var(--general-bg-135);
+    position: relative;
+    object-fit: cover;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(45deg, rgb(74, 207, 236) 21%, rgb(50, 171, 195) 100%, rgb(74, 197, 236) 23%);
+    filter: blur(2px);
+    box-shadow: 0 3px 15px 0 rgba(0, 224, 255, 0.93),
+        0 4px 15px 0 rgba(74, 217, 236, 1),
+        0 0 24px 0 rgba(0, 224, 255, 1);
+    opacity: 0.9;
+    z-index: 3;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    width: 438px;
+    height: 438px;
+    top: -25%;
+    left: 12%;
+    border: inherit;
+    border-radius: inherit;
+    background: rgba(0, 224, 255, 1);
+    filter: blur(247px);
+    opacity: 0.16;
+    z-index: 3;
+}
+
+.hero__img-1 {
+    position: absolute;
+    right: 0;
+    top: 15%;
+    opacity: 0.6;
+    mix-blend-mode: lighten;
+}
+
+.hero__img-2 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0.6;
+    mix-blend-mode: lighten;
+}
+
+.hero__img-3 {
+    position: absolute;
+    right: 32.5%;
+    top: 0;
+    opacity: 0.6;
+    mix-blend-mode: lighten;
+}
+
+.header__top {
+    padding-top: 45px;
+}
+
+.header__top-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 155px;
+}
+
+.header__logo {
+    max-width: 287px;
+    z-index: 11;
+}
+
+.header__logo img {
+    width: 100%;
+}
+
+.header__phone {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header__phone-icon{
+    width: 33px;
+    height: 31px;
+}
+
+.header__phone-number {
+    font-size: var(--font-size);
+}
+
+.window-phone{
+    display: none;
+}
+
+.window__icon-open{
+    display: none;
+}
+
+/*Приветственный текст*/
+
+.hero__content {
+    position: relative;
+}
+
+.hero__welcome {
+    font-size: var(--font-size);
+    color: var(--gray-color);
+    font-weight: 600;
+}
+
+.hero__title {
+    font-size: 108px;
+    font-weight: bold;
+    background-image: linear-gradient(180deg, #ffffff 32%, #1a3031 100%);
+    background-clip: text;
+    color: transparent;
+    max-width: 806px;
+    margin-bottom: 18px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.hero__text {
+    font-size: var(--font-size);
+    max-width: 580px;
+    line-height: 1.5;
+    margin-bottom: 77px;
+}
+
+/*Блок с гаранией*/
+
+.hero__inner {
+    display: flex;
+    gap: 33px;
+    height: 89px;
+    margin-bottom: 100px;
+}
+
+.hero__garanty {
+    max-width: 472px;
+    font-size: var(--font-size);
+}
+
+.hero__garanty-subtitle {
+    margin-bottom: 18px;
+    font-weight: bold;
+}
+
+.hero__garanty-text {
+    max-width: 472px;
+    color: var(--turquoise-color);
+    line-height: 1.5;
+}
+
+.hero__button {
+    margin-bottom: 178px;
+    height: 60px;
+}
+
+/* Бесплатная консультация*/
+
+.free-consultation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 142px;
+    position: fixed;
+    top: 13%;
+    left: 3%;
+    z-index: 14;
+}
+
+.free-consultation__img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: 12;
+    background: var(--bg-button);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    border: none;
+    overflow: visible;
+    position: relative;
+    box-shadow: 0 7px 20px -7px var(--turquoise-color);
+}
+
+.free-consultation__img::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -25%;
+    left: -25%;
+    bottom: -25%;
+    right: -25%;
+    border-radius: inherit;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+    opacity: 0;
+    transition: all .5s;
+}
+
+.free-consultation__img:hover::before {
+    opacity: 1;
+}
+
+.free-consultation__text {
+    color: var(--turquoise-color);
+    transform: rotate(-90deg);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+/*whatapp*/
+
+.whatapp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 28%;
+    left: 10%;
+    z-index: 14;
+    opacity: 0;
+}
+
+.whatapp__img {
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    z-index: 12;
+    background: linear-gradient(0deg, #13cdc2, #03e1ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    border: none;
+    overflow: visible;
+    position: relative;
+    box-shadow: 0 7px 20px -7px var(--turquoise-color);
+}
+
+.whatapp__img::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -20%;
+    left: -20%;
+    bottom: -20%;
+    right: -20%;
+    border-radius: inherit;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+    opacity: 0;
+    transition: all .5s;
+}
+
+.whatapp__img:hover::before {
+    opacity: 1;
+}
+
+/* Кнопка "листайте вниз" */
+
+.scroll-down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 90px;
+    position: absolute;
+    top: 80%;
+    left: 47%;
+}
+
+.scroll-down__title {
+    color: #747D81;
+    transform: rotate(-90deg);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.scroll-down__switch {
+    position: relative;
+    width: 20px;
+    height: 37px;
+}
+
+/* Скрытие стандартного чекбокса */
+.scroll-down__switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Внешний вид фона переключателя */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: transparent;
+    transition: .4s;
+    border-radius: 60px;
+    border: 2px solid #4A8BEC;
+    width: 20px;
+    height: 37px;
+}
+
+/* Вид внутреннего круга */
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    left: 3px;
+    top: 4px;
+    background-color: #4ABCEC;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px 0 #4ABCEC;
+}
